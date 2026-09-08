@@ -2,7 +2,9 @@
 
 Open specifications for blockchain-native assets on the [Nexus blockchain](https://nexus.io). These standards define how on-chain data is structured, verified, and indexed across the entire Distordia ecosystem -- and are free for anyone to adopt.
 
-All web3 applications built by Distordia (and hopefully everyone else) follow these standards.
+All web3 applications built by Distordia (and hopefully everyone else) are intended to follow these standards; actual version adoption requires consumer conformance evidence.
+
+**Implementation guidance:** [Architecture](docs/ARCHITECTURE.md) · [Development plan](docs/DEVELOPMENT_PLAN.md) · [2026-09-08 baseline review](docs/DEVELOPMENT_REVIEW_2026-09-08.md). Draft schemas are design targets, not deployed-program or application certification.
 
 ---
 
