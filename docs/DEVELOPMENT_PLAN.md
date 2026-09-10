@@ -1,10 +1,10 @@
 # Standards development plan
 
-Updated 2026-09-09 at fetched local/remote HEAD `d0e328cccebf15727e1152905898dc810742ac6e`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-09.md).
+Updated 2026-09-10 at pre-publication local/remote HEAD `e8f890e3f02e6aa1fda6a1af76ef3ac0df5c60bc`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-10.md).
 
 ## Status at this baseline
 
-No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; the current `standards/` tree is still `d7bede155734827d88776421eadc8ac7839e5379`. The 2026-09-08 commit added and linked review documentation only. All batches below remain open retained work, not regressions introduced since the prior review.
+No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; the current `standards/` tree is still `d7bede155734827d88776421eadc8ac7839e5379`. The 2026-09-08 and 2026-09-09 commits added and linked review documentation only. All batches below remain open retained work, not regressions introduced since the prior review.
 
 ## Batch 1 — Executable conformance gate (P1)
 

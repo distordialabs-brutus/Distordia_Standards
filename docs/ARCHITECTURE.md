@@ -1,10 +1,10 @@
 # Standards architecture and implementation contract
 
-Reviewed 2026-09-09 at fetched local/remote HEAD `d0e328cccebf15727e1152905898dc810742ac6e`. See [review](DEVELOPMENT_REVIEW_2026-09-09.md) and [development plan](DEVELOPMENT_PLAN.md).
+Reviewed 2026-09-10 at pre-publication local/remote HEAD `e8f890e3f02e6aa1fda6a1af76ef3ac0df5c60bc`. See [review](DEVELOPMENT_REVIEW_2026-09-10.md) and [development plan](DEVELOPMENT_PLAN.md).
 
 ## Scope
 
-This repository contains specifications and design notes, not a deployed Nexus validator, a Solana Anchor program, or an application conformance gate. Draft v0.2.0 schemas are target contracts. Existing unversioned standards and consuming applications must not be silently relabeled v0.2.0. Namespace naming improvements in the latest implementation commits are useful, but do not prove that identity attestation, delegated authority or cross-chain equality is enforced. The only delta after the prior source baseline `83b9f0902a062d9a97089c2729889ea565d7af82` is the 2026-09-08 documentation commit; the `standards/` tree remains exactly `d7bede155734827d88776421eadc8ac7839e5379`.
+This repository contains specifications and design notes, not a deployed Nexus validator, a Solana Anchor program, or an application conformance gate. Draft v0.2.0 schemas are target contracts. Existing unversioned standards and consuming applications must not be silently relabeled v0.2.0. Namespace naming improvements in the latest implementation commits are useful, but do not prove that identity attestation, delegated authority or cross-chain equality is enforced. The only deltas after source baseline `83b9f0902a062d9a97089c2729889ea565d7af82` are the 2026-09-08 and 2026-09-09 documentation publications; the `standards/` tree remains exactly `d7bede155734827d88776421eadc8ac7839e5379`.
 
 ## Layers and authorities
 
@@ -30,4 +30,4 @@ Pin core branch/SHA, network and registered methods before adopting API recipes.
 
 ## Acceptance
 
-**Design catalog, not implementation-certified standard.** Acceptance requires a reproducible conformance gate, two-party ownership/payment fixtures where relevant, serializer vectors and actual consuming-adapter tests. Current verification and prioritized work are in the linked 2026-09-09 review and plan.
+**Design catalog, not implementation-certified standard.** Acceptance requires a reproducible conformance gate, two-party ownership/payment fixtures where relevant, serializer vectors and actual consuming-adapter tests. Current verification and prioritized work are in the linked 2026-09-10 review and plan.
