@@ -1,17 +1,18 @@
 # Standards development plan
 
-Updated 2026-09-10 at pre-publication local/remote HEAD `e8f890e3f02e6aa1fda6a1af76ef3ac0df5c60bc`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-10.md).
+Updated 2026-09-12 at pre-publication local/remote HEAD `326ba2f63e363ed7fa9ea4111f5229fe931b42f6`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-12.md).
 
 ## Status at this baseline
 
-No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; the current `standards/` tree is still `d7bede155734827d88776421eadc8ac7839e5379`. The 2026-09-08 and 2026-09-09 commits added and linked review documentation only. All batches below remain open retained work, not regressions introduced since the prior review.
+No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; the current `standards/` tree is still `d7bede155734827d88776421eadc8ac7839e5379`. No commit follows the 2026-09-10 review publication. All batches below remain open retained work, not regressions introduced since the prior review.
 
 ## Batch 1 — Executable conformance gate (P1)
 
 - Add one documented command and CI for all standards: JSON syntax, unique field names/type identifiers, required-field coverage, supported scalar types, default/enum UTF-8 length and integer bounds, example validation, version references and local Markdown links.
 - Add an explicit schema/validator for the specification format. Do not claim ordinary JSON Schema validation can enforce `nexusFields` and custom field-definition semantics without a custom schema/validator.
+- Validate every normative Nexus query against a pinned query grammar: `results.<field>`, supported comparison operators, `*` wildcards, escaping and pagination. Reject the current undocumented SQL-style `LIKE` examples or label them non-executable pseudocode.
 - Separate descriptive examples, deliberately invalid fixtures, and normative data. Unknown schema versions reject or remain read-only rather than being implicitly accepted.
-- Exit: clean checkout runs the whole gate; deliberate duplicate-field, out-of-range integer, mismatched example and broken-reference fixtures fail. The present offline parsing/enum probe is only a baseline, not this gate.
+- Exit: clean checkout runs the whole gate; deliberate duplicate-field, out-of-range integer, mismatched example, invalid query and broken-reference fixtures fail. At least the NexGo open-request, offer, taxi-area and rating filters execute with pagination against an isolated pinned core. The historical offline parsing/enum probe is only a baseline, not this gate.
 
 ## Batch 2 — Resolve product revision identity before an Anchor implementation (P1)
 

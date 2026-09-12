@@ -1,6 +1,6 @@
 # Standards architecture and implementation contract
 
-Reviewed 2026-09-10 at pre-publication local/remote HEAD `e8f890e3f02e6aa1fda6a1af76ef3ac0df5c60bc`. See [review](DEVELOPMENT_REVIEW_2026-09-10.md) and [development plan](DEVELOPMENT_PLAN.md).
+Reviewed 2026-09-12 at pre-publication local/remote HEAD `326ba2f63e363ed7fa9ea4111f5229fe931b42f6`. No commit follows the 2026-09-10 review publication. See [review](DEVELOPMENT_REVIEW_2026-09-12.md) and [development plan](DEVELOPMENT_PLAN.md).
 
 ## Scope
 
@@ -28,6 +28,10 @@ The inspected Solana offset table is internally contiguous and totals 545 bytes.
 
 Pin core branch/SHA, network and registered methods before adopting API recipes. Core read-by-address and any filter restrictions must be verified directly, not inferred from older website examples. No public/foreign node receives profile credentials. A Solana program release needs source, tests, authority constraints and a verified program/cluster identity; a JSON string containing Rust is not such a release.
 
+### Executable Nexus query contract
+
+Normative discovery examples must use the pinned core's actual query DSL. Current API documentation uses `results.<field>` and `*` string wildcards; it does not document SQL `LIKE`. The v0.2.0 NexGo ride/taxi filters and the mobility design note instead use unprefixed fields plus `LIKE`, so geo-sharded discovery is not currently an executable contract. Publish transport-ready request fixtures separately from explanatory pseudocode, validate pagination/completeness, and run them against an isolated pinned core before claiming queryability.
+
 ## Acceptance
 
-**Design catalog, not implementation-certified standard.** Acceptance requires a reproducible conformance gate, two-party ownership/payment fixtures where relevant, serializer vectors and actual consuming-adapter tests. Current verification and prioritized work are in the linked 2026-09-10 review and plan.
+**Design catalog, not implementation-certified standard.** Acceptance requires a reproducible conformance gate, executable pinned-core query fixtures, two-party ownership/payment fixtures where relevant, serializer vectors and actual consuming-adapter tests. Current verification and prioritized work are in the linked 2026-09-12 review and plan.
