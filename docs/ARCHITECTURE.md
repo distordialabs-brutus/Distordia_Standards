@@ -1,10 +1,10 @@
 # Standards architecture and implementation contract
 
-Reviewed 2026-09-12 at pre-publication local/remote HEAD `326ba2f63e363ed7fa9ea4111f5229fe931b42f6`. No commit follows the 2026-09-10 review publication. See [review](DEVELOPMENT_REVIEW_2026-09-12.md) and [development plan](DEVELOPMENT_PLAN.md).
+Reviewed 2026-09-15 at local/remote HEAD `00aa5649b52cd5e52dd13abc0e6e33dda4ea5891`. The only commit since the prior review baseline is its 2026-09-12 documentation publication; the standards tree remains `d7bede155734827d88776421eadc8ac7839e5379`. See [review](DEVELOPMENT_REVIEW_2026-09-15.md) and [development plan](DEVELOPMENT_PLAN.md).
 
 ## Scope
 
-This repository contains specifications and design notes, not a deployed Nexus validator, a Solana Anchor program, or an application conformance gate. Draft v0.2.0 schemas are target contracts. Existing unversioned standards and consuming applications must not be silently relabeled v0.2.0. Namespace naming improvements in the latest implementation commits are useful, but do not prove that identity attestation, delegated authority or cross-chain equality is enforced. The only deltas after source baseline `83b9f0902a062d9a97089c2729889ea565d7af82` are the 2026-09-08 and 2026-09-09 documentation publications; the `standards/` tree remains exactly `d7bede155734827d88776421eadc8ac7839e5379`.
+This repository contains specifications and design notes, not a deployed Nexus validator, a Solana Anchor program, or an application conformance gate. Draft v0.2.0 schemas are target contracts. Existing unversioned standards and consuming applications must not be silently relabeled v0.2.0. Namespace naming improvements in the latest implementation commits are useful, but do not prove that identity attestation, delegated authority or cross-chain equality is enforced. No standards source has changed after baseline `83b9f0902a062d9a97089c2729889ea565d7af82`; later commits through the reviewed HEAD are review documentation only.
 
 ## Layers and authorities
 
@@ -34,4 +34,4 @@ Normative discovery examples must use the pinned core's actual query DSL. Curren
 
 ## Acceptance
 
-**Design catalog, not implementation-certified standard.** Acceptance requires a reproducible conformance gate, executable pinned-core query fixtures, two-party ownership/payment fixtures where relevant, serializer vectors and actual consuming-adapter tests. Current verification and prioritized work are in the linked 2026-09-12 review and plan.
+**Design catalog, not implementation-certified standard.** Acceptance requires a reproducible conformance gate, executable pinned-core query fixtures, two-party ownership/payment fixtures where relevant, serializer vectors and actual consuming-adapter tests. The exact next repair is Batch 1: check in one validator/CI command plus invalid fixtures and transport-ready, paginated NexGo query fixtures for a pinned isolated core. Exit only when a clean checkout rejects duplicate/overlength/out-of-range/example/query/link failures and executes open-request, offer, taxi-area and rating discovery fixtures. Current evidence and remaining batches are in the linked 2026-09-15 review and plan.

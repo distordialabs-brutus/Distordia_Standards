@@ -1,10 +1,10 @@
 # Standards development plan
 
-Updated 2026-09-12 at pre-publication local/remote HEAD `326ba2f63e363ed7fa9ea4111f5229fe931b42f6`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-12.md).
+Updated 2026-09-15 at local/remote HEAD `00aa5649b52cd5e52dd13abc0e6e33dda4ea5891`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-15.md).
 
 ## Status at this baseline
 
-No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; the current `standards/` tree is still `d7bede155734827d88776421eadc8ac7839e5379`. No commit follows the 2026-09-10 review publication. All batches below remain open retained work, not regressions introduced since the prior review.
+No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; the current `standards/` tree is still `d7bede155734827d88776421eadc8ac7839e5379`. Since the 2026-09-12 review baseline, only that review's documentation commit was added. A fresh 21-file JSON/duplicate-name probe and local Markdown-link check passed, but these narrow checks do not establish conformance. All batches below remain open retained work, not regressions introduced since the prior review. **Next repair:** Batch 1, before schema or status promotion.
 
 ## Batch 1 — Executable conformance gate (P1)
 
