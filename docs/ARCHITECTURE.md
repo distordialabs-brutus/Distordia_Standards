@@ -1,6 +1,6 @@
 # Standards architecture and implementation contract
 
-Reviewed 2026-09-15 at local/remote HEAD `00aa5649b52cd5e52dd13abc0e6e33dda4ea5891`. The only commit since the prior review baseline is its 2026-09-12 documentation publication; the standards tree remains `d7bede155734827d88776421eadc8ac7839e5379`. See [review](DEVELOPMENT_REVIEW_2026-09-15.md) and [development plan](DEVELOPMENT_PLAN.md).
+Reviewed 2026-09-16 at freshly fetched local/remote HEAD `d0b9d04155035e970d1ba4149465a5838a2ca63b`. The only commit since the 2026-09-15 reviewed source baseline is that review's documentation publication; the standards tree remains `d7bede155734827d88776421eadc8ac7839e5379`. See [review](DEVELOPMENT_REVIEW_2026-09-16.md) and [development plan](DEVELOPMENT_PLAN.md).
 
 ## Scope
 
@@ -32,6 +32,12 @@ Pin core branch/SHA, network and registered methods before adopting API recipes.
 
 Normative discovery examples must use the pinned core's actual query DSL. Current API documentation uses `results.<field>` and `*` string wildcards; it does not document SQL `LIKE`. The v0.2.0 NexGo ride/taxi filters and the mobility design note instead use unprefixed fields plus `LIKE`, so geo-sharded discovery is not currently an executable contract. Publish transport-ready request fixtures separately from explanatory pseudocode, validate pagination/completeness, and run them against an isolated pinned core before claiming queryability.
 
+### Version discrimination and verified-ride evidence
+
+Every one of the 13 inspected v0.2.0 logical Nexus asset types declares an immutable `schema-ver` field but omits it from its `required` list. A conformance reader therefore cannot both follow those required lists and enforce the stated unknown-version fail-closed rule. Make `schema-ver` required with the exact supported value in every versioned type, and add missing/wrong/unknown-version rejection fixtures.
+
+A passenger-owned ride agreement's mutable `status=completed` is also not independent evidence that a ride occurred. Rating validation must traverse canonical request, driver-owned offer, passenger-owned agreement and the exact paid invoice; verify owner/namespace bindings, request/offer/agreement terms, recipient/provider/account/token/currency/integer amount and payment evidence; and define duplicate-rating selection. Treat physical trip completion as the documented oracle boundary rather than claiming that a mutable agreement status alone creates a verified ride.
+
 ## Acceptance
 
-**Design catalog, not implementation-certified standard.** Acceptance requires a reproducible conformance gate, executable pinned-core query fixtures, two-party ownership/payment fixtures where relevant, serializer vectors and actual consuming-adapter tests. The exact next repair is Batch 1: check in one validator/CI command plus invalid fixtures and transport-ready, paginated NexGo query fixtures for a pinned isolated core. Exit only when a clean checkout rejects duplicate/overlength/out-of-range/example/query/link failures and executes open-request, offer, taxi-area and rating discovery fixtures. Current evidence and remaining batches are in the linked 2026-09-15 review and plan.
+**Design catalog, not implementation-certified standard.** Acceptance requires a reproducible conformance gate, mandatory exact version discriminators, executable pinned-core query fixtures, two-party ownership/payment fixtures where relevant, serializer vectors and actual consuming-adapter tests. The exact next repair is Batch 1: check in one validator/CI command plus invalid fixtures and transport-ready, paginated NexGo query fixtures for a pinned isolated core. Exit only when a clean checkout rejects missing/unknown versions, duplicate/overlength/out-of-range/example/query/link failures and executes open-request, offer, taxi-area and rating discovery fixtures. Current evidence and remaining batches are in the linked 2026-09-16 review and plan.

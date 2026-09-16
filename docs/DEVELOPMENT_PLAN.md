@@ -1,18 +1,18 @@
 # Standards development plan
 
-Updated 2026-09-15 at local/remote HEAD `00aa5649b52cd5e52dd13abc0e6e33dda4ea5891`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-15.md).
+Updated 2026-09-16 at freshly fetched local/remote HEAD `d0b9d04155035e970d1ba4149465a5838a2ca63b`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-16.md).
 
 ## Status at this baseline
 
-No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; the current `standards/` tree is still `d7bede155734827d88776421eadc8ac7839e5379`. Since the 2026-09-12 review baseline, only that review's documentation commit was added. A fresh 21-file JSON/duplicate-name probe and local Markdown-link check passed, but these narrow checks do not establish conformance. All batches below remain open retained work, not regressions introduced since the prior review. **Next repair:** Batch 1, before schema or status promotion.
+No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; the current `standards/` tree is still `d7bede155734827d88776421eadc8ac7839e5379`. Since the 2026-09-15 review baseline, only that review's documentation commit was added. A fresh 21-file JSON/duplicate-name probe and local Markdown-link check passed, but these narrow checks do not establish conformance. A focused probe also found that all 13 v0.2.0 logical Nexus asset types define `schema-ver` but omit it from `required`. All batches below remain open retained work, not regressions introduced since the prior review. **Next repair:** Batch 1, before schema or status promotion.
 
 ## Batch 1 — Executable conformance gate (P1)
 
-- Add one documented command and CI for all standards: JSON syntax, unique field names/type identifiers, required-field coverage, supported scalar types, default/enum UTF-8 length and integer bounds, example validation, version references and local Markdown links.
+- Add one documented command and CI for all standards: JSON syntax, unique field names/type identifiers, required-field coverage, supported scalar types, default/enum UTF-8 length and integer bounds, example validation, version references and local Markdown links. Require the exact immutable `schema-ver` discriminator for every versioned logical asset; all 13 current v0.2.0 Nexus types need this correction.
 - Add an explicit schema/validator for the specification format. Do not claim ordinary JSON Schema validation can enforce `nexusFields` and custom field-definition semantics without a custom schema/validator.
 - Validate every normative Nexus query against a pinned query grammar: `results.<field>`, supported comparison operators, `*` wildcards, escaping and pagination. Reject the current undocumented SQL-style `LIKE` examples or label them non-executable pseudocode.
 - Separate descriptive examples, deliberately invalid fixtures, and normative data. Unknown schema versions reject or remain read-only rather than being implicitly accepted.
-- Exit: clean checkout runs the whole gate; deliberate duplicate-field, out-of-range integer, mismatched example, invalid query and broken-reference fixtures fail. At least the NexGo open-request, offer, taxi-area and rating filters execute with pagination against an isolated pinned core. The historical offline parsing/enum probe is only a baseline, not this gate.
+- Exit: clean checkout runs the whole gate; deliberate missing/wrong/unknown version, duplicate-field, out-of-range integer, mismatched example, invalid query and broken-reference fixtures fail. At least the NexGo open-request, offer, taxi-area and rating filters execute with pagination against an isolated pinned core. The historical offline parsing/enum probe is only a baseline, not this gate.
 
 ## Batch 2 — Resolve product revision identity before an Anchor implementation (P1)
 
@@ -30,6 +30,6 @@ No standards source changed after `83b9f0902a062d9a97089c2729889ea565d7af82`; th
 ## Batch 4 — Consumer migration and release acceptance (P2)
 
 - Publish a matrix for each consumer, starting with NexGo: actual writer shape, accepted reader versions, target schema and missing adapter tests. The existing NexGo `version: 1` raw blob is not a v0.2.0 typed request/offer/agreement.
-- Require exact invoice recipient/provider/account/token/amount binding and read-back before treating an agreement as paid; document privacy-preserving precise-location handoff rather than public coordinate history.
+- Require exact invoice recipient/provider/account/token/currency/integer-amount binding and read-back before treating an agreement as paid. Rating validity must traverse canonical request, driver-owned offer, passenger-owned agreement and paid invoice evidence; mutable `agreement.status=completed` alone is insufficient. Define deterministic duplicate-rating handling and document the physical-completion oracle boundary. Document privacy-preserving precise-location handoff rather than public coordinate history.
 - Pin Nexus core/wallet versions and source-verified endpoint/response fixtures. Use isolated test profiles and devnet/local validator identities; no illustrative address is a production program ID.
-- Exit: a consumer contract test writes, reads and validates each supported version and rejects an unknown version or forged cross-reference. Draft status only changes after its stated protocol and live acceptance evidence exists.
+- Exit: a consumer contract test writes, reads and validates each supported version and rejects an unknown/missing version, forged owner/namespace or cross-reference, unpaid/mismatched invoice and duplicate rating. Draft status only changes after its stated protocol and live acceptance evidence exists.
