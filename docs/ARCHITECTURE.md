@@ -1,6 +1,6 @@
 # Standards architecture and implementation contract
 
-Reviewed 2026-09-17 at HEAD `a5f94125ebc07f02120f29b39d811ea3d67c658f`. The only commit after the 2026-09-16 reviewed source (`d0b9d04155035e970d1ba4149465a5838a2ca63b`) is that review's documentation publication; a path-limited diff confirms no standards change and `standards/` remains tree `d7bede155734827d88776421eadc8ac7839e5379`. See [review](DEVELOPMENT_REVIEW_2026-09-17.md) and [development plan](DEVELOPMENT_PLAN.md).
+Reviewed 2026-09-17 at HEAD `a5f94125ebc07f02120f29b39d811ea3d67c658f`. The only commit after the 2026-09-16 reviewed source (`d0b9d04155035e970d1ba4149465a5838a2ca63b`) is that review's documentation publication; a path-limited diff confirms no standards change and `standards/` remains tree `d7bede155734827d88776421eadc8ac7839e5379`. See [review](DEVELOPMENT_REVIEW_2026-09-17.md), [development plan](DEVELOPMENT_PLAN.md), and the [2026-10-02 conformance acceptance addendum](ARCHITECTURE_ADDENDUM_2026-10-02.md).
 
 ## Scope
 

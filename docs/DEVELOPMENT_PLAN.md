@@ -1,6 +1,6 @@
 # Standards development plan
 
-Updated 2026-09-17 at HEAD `a5f94125ebc07f02120f29b39d811ea3d67c658f`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-17.md).
+Updated 2026-09-17 at HEAD `a5f94125ebc07f02120f29b39d811ea3d67c658f`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-17.md) · [2026-10-02 handoff](DEVELOPMENT_REVIEW_ADDENDUM_2026-10-02.md).
 
 ## Status at this baseline
 

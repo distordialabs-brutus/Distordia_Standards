@@ -9,6 +9,8 @@
 > **Reference date:** 2026-06. Comparables reflect the decentralized-identity, content-provenance,
 > decentralized-social, NFT, AI-agent, and decentralized-mobility landscapes as of that time.
 
+Current repository-evidence qualification: [2026-10-02 evaluation addendum](STANDARDS_MARKET_EVALUATION_ADDENDUM_2026-10-02.md).
+
 ---
 
 ## 1. How to read this
