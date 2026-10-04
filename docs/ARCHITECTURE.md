@@ -1,5 +1,11 @@
 # Standards architecture and implementation contract
 
+## Governing vision and portfolio traceability
+
+Read [the repository vision](../vision.md) and [Distordia alignment/dependency map](DISTORDIA_ALIGNMENT.md) before assigning work. Authority is master Distordia strategy/customer evidence → portfolio roadmap/strategy decisions → repository vision → this architecture → tasks/code/tests/external evidence and human release.
+
+**Portfolio purpose:** O1 independently implementable standards; O2 namespace authority; O3 reproducible evidence. Canonical versions, explicit chain realizations, strict conformance and independently replayable authority/evidence semantics. Distordia verification is optional evidence, not mandatory execution permission. The alignment map supplies customer-evidence qualification, batch ownership, upstream prerequisites and human gates. Each material task must name those fields alongside its exact production paths and collected acceptance tests. This documentation alignment changes no runtime, test result or release status; dated evidence below remains evidence for its stated snapshot only.
+
 Reviewed 2026-09-17 at HEAD `a5f94125ebc07f02120f29b39d811ea3d67c658f`. The only commit after the 2026-09-16 reviewed source (`d0b9d04155035e970d1ba4149465a5838a2ca63b`) is that review's documentation publication; a path-limited diff confirms no standards change and `standards/` remains tree `d7bede155734827d88776421eadc8ac7839e5379`. See [review](DEVELOPMENT_REVIEW_2026-09-17.md), [development plan](DEVELOPMENT_PLAN.md), and the [2026-10-02 conformance acceptance addendum](ARCHITECTURE_ADDENDUM_2026-10-02.md).
 
 ## Scope

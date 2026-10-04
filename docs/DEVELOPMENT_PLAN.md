@@ -1,5 +1,11 @@
 # Standards development plan
 
+## Governing vision and portfolio traceability
+
+Read [the repository vision](../vision.md) and [Distordia alignment/dependency map](DISTORDIA_ALIGNMENT.md) before assigning work. Authority is master Distordia strategy/customer evidence → portfolio roadmap/strategy decisions → repository vision → this development plan → tasks/code/tests/external evidence and human release.
+
+**Portfolio purpose:** O1 independently implementable standards; O2 namespace authority; O3 reproducible evidence. Canonical versions, explicit chain realizations, strict conformance and independently replayable authority/evidence semantics. Distordia verification is optional evidence, not mandatory execution permission. The alignment map supplies customer-evidence qualification, batch ownership, upstream prerequisites and human gates. Each material task must name those fields alongside its exact production paths and collected acceptance tests. This documentation alignment changes no runtime, test result or release status; dated evidence below remains evidence for its stated snapshot only.
+
 Updated 2026-09-17 at HEAD `a5f94125ebc07f02120f29b39d811ea3d67c658f`. [Architecture](ARCHITECTURE.md) · [Review evidence](DEVELOPMENT_REVIEW_2026-09-17.md) · [2026-10-02 handoff](DEVELOPMENT_REVIEW_ADDENDUM_2026-10-02.md).
 
 ## Status at this baseline
@@ -8,7 +14,15 @@ No standards source changed after the 2026-09-16 reviewed source; the current `s
 
 ## Batch 1A — Mandatory versions and offline conformance gate (P1)
 
-- Update `standards/article-standard.v0.2.0.json`, `content-standard.v0.2.0.json`, `namespace-standard.v0.2.0.json`, `nexgo-rating-standard.v0.2.0.json`, `nexgo-ride-standard.v0.2.0.json`, `nexgo-taxi-standard.v0.2.0.json`, `product-standard.v0.2.0.json` and `product-standard.v0.2.0.solana.json`. Require the exact immutable `schema-ver` discriminator for all 13 Nexus logical types and preserve the declared Nexus/Solana product required-set parity.
+The [October 2 conformance contract](ARCHITECTURE_ADDENDUM_2026-10-02.md) and
+[task-level handoff](DEVELOPMENT_REVIEW_ADDENDUM_2026-10-02.md) refine this batch:
+canonical 21-document manifest with dialect adapters and digests; repository-global
+example resolution; strict-valid coverage for all 13 logical types; repair the five
+known UTF-8 example overflows without widening limits; deterministic diagnostics;
+adversarial fixtures; and one identical local/CI command. Their complete acceptance
+criteria are mandatory; the older summary below is not a smaller alternative scope.
+
+- Update `standards/article-standard.v0.2.0.json`, `content-standard.v0.2.0.json`, `namespace-standard.v0.2.0.json`, `nexgo-rating-standard.v0.2.0.json`, `nexgo-ride-standard.v0.2.0.json`, `nexgo-taxi-standard.v0.2.0.json`, `social-standard.v0.2.0.json`, `product-standard.v0.2.0.json` and `product-standard.v0.2.0.solana.json`. Require the exact immutable `schema-ver` discriminator for all 13 Nexus logical types and preserve the declared Nexus/Solana product required-set parity.
 - Add `tools/validate_standards.py`, `tests/fixtures/valid/`, `tests/fixtures/invalid/`, a documented command in `README.md` and `.github/workflows/standards.yml` for JSON syntax, unique field/type identity, required-field coverage, supported scalar types, default/enum UTF-8 length and integer bounds, example validation, version references and local Markdown links.
 - Add an explicit schema/validator for the specification format. Do not claim ordinary JSON Schema validation can enforce `nexusFields` and custom field-definition semantics without a custom schema/validator.
 - Separate descriptive examples, deliberately invalid fixtures, and normative data. Unknown schema versions reject or remain read-only rather than being implicitly accepted.
