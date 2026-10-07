@@ -2,6 +2,8 @@
 
 ## Scope and current authority
 
+> **Current source qualification:** published source is now remote tip `e590a2af627c8f2b6c8a0fa9c6f5642f04652982`; `standards/` is unchanged at tree `d7bede155734827d88776421eadc8ac7839e5379`. Local-only `f30b183a34af4fd7a9f5757ade15a3038f8cd2ce` is a divergent sibling from merge base `db3da5626f270d5d411c4f9eb4b6d9e706891b10`, not an ahead commit or published evidence. Its agent/commerce research remains venture hypothesis context. The source conclusions below still apply because the standards bytes are unchanged.
+
 This documentation-only addendum qualifies `docs/standards-market-evaluation.md` against source commit `db3da5626f270d5d411c4f9eb4b6d9e706891b10` and committed `standards/` tree `d7bede155734827d88776421eadc8ac7839e5379`. The requested baseline equals reviewed HEAD, so there is no committed implementation or specification delta to change a readiness verdict.
 
 The existing market comparison remains design analysis. External protocol versions and lifecycle labels in the local agent-asset/commerce research were not revalidated in this repository review. That research is not published implementation evidence and does not promote any Distordia standard.
@@ -15,6 +17,8 @@ The repository remains a design catalog, not an implementation-certified suite. 
 - No standard is **near-production** on repository evidence because the common offline conformance foundation is absent.
 
 The immediate cross-cutting market risk is not another feature gap. It is the lack of a canonical manifest, mandatory wire discrimination, strict-valid fixtures, and a checked-in conformance/CI gate. Until Batch 1A lands, consumers cannot deterministically answer which specification and chain profile a record implements or whether a checked-in example satisfies its own declaration.
+
+An independent strict-positive/adversarial scratch probe confirms that blocker without changing the verdict: all 21 JSON documents parse; the 13 generated declaration-complete positives pass; checked-in examples cover only 7/13 types strictly (3 invalid-only, 3 missing); and 93/106 adversarial cases reject. All 13 unexpected accepts are missing-`schema-ver`, one per logical type. The probe is diagnostic only, lives outside the repository, and is neither the missing maintained validator nor shipped conformance evidence.
 
 ## Accepted design progress, not implementation
 

@@ -4,9 +4,11 @@
 
 The master Distordia project also owns `PORTFOLIO_DEVELOPMENT_PLAN.md` and its strategy-decision register. The full order is **master strategy/customer evidence → portfolio roadmap/decisions → this vision → architecture/development plan → tasks/code/tests/release evidence**. Read the [portable repository alignment](docs/DISTORDIA_ALIGNMENT.md) for objective, customer-evidence, ownership and dependency mapping. Master-source paths below are local workspace references, not promised GitHub links. This section adds portfolio sequencing; it does not certify the envisioned behavior or amend unresolved master strategy assumptions.
 
+The canonical Business Thesis DOCX governs strategic intent and the Customer Problem Atlas classifies observed problems. The maintained portfolio plan is the required intermediate layer for sequencing and unresolved decisions; it does not amend either DOCX. The Atlas currently supports industrial asset-information/provenance profiles with Class A evidence. It does not validate mobility, agent commerce, tokenized accountability, reputation markets, collateral/slashing, regulatory treatment, or adoption. Venture notes for those areas are hypotheses only.
+
 ## Accountability venture context — not canonical authority
 
-[Staked Accountability Rails](../../projects/Distordia/staked-accountability-rails.md) and [Infrastructure Buildout](../../projects/Distordia/infrastructure-buildout.md) are venture hypotheses and dependency-design context. They do not amend canonical strategy or prove enforceable collateral/slashing, non-custody, regulatory status, reputation, or adoption. Interpret unresolved claims through the master portfolio decision register (SD-002–SD-008); feasibility, legal assessment and human decisions remain required.
+Local-only, non-link venture sources `/home/brutus/projects/Distordia/staked-accountability-rails.md` and `/home/brutus/projects/Distordia/infrastructure-buildout.md` are venture hypotheses and dependency-design context. They do not amend canonical strategy or prove enforceable collateral/slashing, non-custody, regulatory status, reputation, or adoption. Interpret unresolved claims through the master portfolio decision register (SD-002–SD-008); feasibility, legal assessment and human decisions remain required.
 
 ## Purpose
 
@@ -18,10 +20,11 @@ Distordia is a **standard-setter, not a gatekeeper**. Specifications, validation
 
 Work in this repository follows this order of authority:
 
-1. **Canonical master strategy and customer evidence** — [Business Thesis and Strategy v2](../../projects/Distordia/Distordia_Labs_Business_Thesis_and_Strategy_v2.docx) and [Customer Problem Atlas v2](../../projects/Distordia/Distordia_Customer_Problem_Atlas_v2.docx). The master `PORTFOLIO_DEVELOPMENT_PLAN.md` records portfolio sequencing and explicit strategy decisions before this repository vision.
-2. **This vision** defines what this standards repository exists to accomplish and the boundaries it must preserve.
-3. **Architecture and development plans** — notably [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) and [`docs/DEVELOPMENT_PLAN.md`](docs/DEVELOPMENT_PLAN.md) — translate the vision into implementation contracts and sequenced work.
-4. **Schemas, tests, and adoption evidence** establish the exact behavior and the level of implementation or adoption actually proved.
+1. **Canonical originals** — local-only, non-link `/home/brutus/projects/Distordia/Distordia_Labs_Business_Thesis_and_Strategy_v2.docx` governs strategy; local-only, non-link `/home/brutus/projects/Distordia/Distordia_Customer_Problem_Atlas_v2.docx` classifies customer evidence and supports only the profiles its evidence names.
+2. **Maintained portfolio layer** — the master `PORTFOLIO_DEVELOPMENT_PLAN.md` records cross-repository sequencing and explicit unresolved decisions. Venture research and accountability/buildout notes are hypotheses feeding this layer, not canonical amendments.
+3. **This vision** defines what this standards repository exists to accomplish and the boundaries it must preserve.
+4. **Architecture and development plans** — notably [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) and [`docs/DEVELOPMENT_PLAN.md`](docs/DEVELOPMENT_PLAN.md) — translate the vision into implementation contracts and sequenced work.
+5. **Schemas, tests, and adoption evidence** establish the exact behavior and the level of implementation or adoption actually proved.
 
 When sources conflict, the higher source governs intent and the lower source must be corrected or explicitly marked unresolved; do not silently reconcile incompatible meanings. Evidence remains authoritative about status: a strategy or plan cannot make a draft deployed, conformant, or adopted. A schema that conflicts with architecture is nonconforming; a passing structural test cannot prove chain behavior; an adoption claim requires identifiable consumer and execution evidence.
 
